@@ -1,0 +1,26 @@
+/* MyCalendar.css */
+
+/* 일요일 날짜: 빨간색 */
+.fc-day-sun a {
+    color: red;
+}
+
+/* 토요일 날짜: 파란색 */
+.fc-day-sat a {
+    color: gray;
+}
+
+/* 툴바의 요일 값 대문자 전환 */
+.fc-col-header-cell-cushion{
+    text-transform:uppercase;
+}
+/*레이아웃만들려는데 안되네...*/
+.fc .fc-media-screen .fc-direction-ltr .fc-theme-standard{
+    width:auto;
+    height:100%;
+}
+/* 전,후 달의 날짜 배경색: 흰색*/
+.fc .fc-day-disabled {
+    background: rgba(255, 255, 255);
+    background: var(--fc-neutral-bg-color, rgba(255, 255, 255));
+}
