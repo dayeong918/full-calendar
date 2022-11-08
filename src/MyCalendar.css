@@ -1,10 +1,93 @@
 /* MyCalendar.css */
-
-/* 일요일 날짜: 빨간색 */
-.fc-day-sun a {
-    color: red;
+@import url('https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css');
+.nanum{
+    font-family:'NanumSquare';
+}
+@font-face {
+    font-family: 'escoreDream';
+    src: url('/Users/gimdayeong/Library/Fonts/SCDream3.otf') format('truetype');
+}
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+.notosanskr * {
+    font-family: 'Noto Sans KR', sans-serif;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100;200;300&display=swap');
+.RobotoMono{
+    font-family:'Roboto Mono';
+}
+
+/* html,
+body {
+    height: 100vh;
+    margin:20px;
+} */
+div .root{
+    display:grid;
+    align-items: center;
+}
+
+.App{
+    height:100vh;
+    margin: 25px;
+}
+/*달력 표*/
+table {
+    width:auto;
+    table-layout:fixed;
+    height:100vh;
+}
+.fc-dom-2{
+    height:100vh;
+    table-layout:fixed;
+}
+/*달력 월 */
+h1{
+    font-family: 'NanumSquare';
+    color:rgb(231, 185, 102);
+    font-weight:900;    
+    font-size:98px;
+    margin:0 0;
+}
+/*2022 March*/
+#fc-dom-2{
+    font-size: 18px;
+    color:rgb(231, 185, 102);
+    font-family:sans-serif;
+}
+
+/* .fc-daygrid .fc-dayGridMonth-view .fc-view{
+    height:100vh;
+}
+.fc-view-harness .fc-view-harness-active{
+    height:100vh;
+} */
+
+/*SUN-SAT 폰트*/
+.fc-col-header-cell-cushion{
+    font-family:'sans-serif';
+    font-size:18px;
+    letter-spacing: -1px;
+}
+/*달력 날짜 폰트*/
+.fc-daygrid-day-number{
+    /* font-family:'escoreDream'; */
+    /* font-family: 'NanumSquar'; */
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    letter-spacing: -1px;
+    font-size: 27px;
+}
+/*달력 날짜 위치(가운데)*/
+.fc-daygrid-day-top{
+    display: flex;
+    justify-content: center;
+    vertical-align: top;
+}
+/* 일요일 날짜: 빨간색 */
+.fc-day-sun a {
+    color: rgb(232, 100, 100);
+}
 /* 토요일 날짜: 파란색 */
 .fc-day-sat a {
     color: gray;
@@ -19,8 +102,80 @@
     width:auto;
     height:100%;
 }
+/*이벤트 컨테이너 배경색,글자색 */
+.fc-event-title-container{
+    color:black;
+    display:flex;
+    justify-content: center;
+}
+/* .fc-event-title .fc-sticky{
+
+} */
+#a{
+    color:red;
+}
 /* 전,후 달의 날짜 배경색: 흰색*/
 .fc .fc-day-disabled {
     background: rgba(255, 255, 255);
     background: var(--fc-neutral-bg-color, rgba(255, 255, 255));
+}
+/*표 border*/
+/*fc-view-harness:tr,td fc-view-harness-active:테이블*/
+/* .fc-view-harness-active {
+    border-style: solid ;
+    border-width: 1px;
+    border-color: burlywood;
+    border-collapse: collapse;
+} */
+.fc-col-header-cell {
+    border-style: solid;
+    border-width: 1px;
+    border-color: burlywood;
+    border-collapse: collapse;
+}
+.app {
+    width: 100vw;
+    height: 100vh;
+}
+
+/*이벤트 날짜 색깔:빨강*/
+#fc-dom-12, #fc-dom-44{
+    color:rgb(232, 100, 100);
+}
+
+
+/*표 width 비율*/
+.fc .fc-scrollgrid,
+.fc .fc-scrollgrid table {
+    /* all tables (self included) */
+    width: 100%;
+    /* height:80%; */
+    /* because tables don't normally do this */
+    table-layout: fixed;
+    justify-content: center;
+}
+.fc .fc-scrollgrid {
+/* inner tables */
+    border:none;
+}
+
+.fc-theme-standard td,
+.fc-theme-standard th {
+    border-bottom: 1px solid rgb(231, 185, 102);
+    border-top: 1px solid var(--fc-border-color, rgb(231, 185, 102));
+    border-left:none;
+    border-right:none;
+}
+
+.fc-theme-standard .fc-scrollgrid {
+    border: none;
+    border: none var(--fc-border-color);
+    /* bootstrap does this. match */
+}
+
+.fc-theme-standard .fc-popover{
+    border: none;
+    border: none var(--fc-border-color, #ddd);
+    background: #fff;
+    background: var(--fc-page-bg-color, #fff);
 }
