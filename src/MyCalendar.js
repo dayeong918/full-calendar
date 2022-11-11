@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import FullCalendar, { CalendarApi, CalendarRoot } from '@fullcalendar/react'; // must go before plugins
 import dayGridPlugin from '@fullcalendar/daygrid'; // a plugin!
 import './MyCalendar.css';
-import hoilday from './holiday.json';
-import aniversary from './aniversary.json';
+// import hoilday from './holiday.json';
+// import aniversary from './aniversary.json';
+// import { getEventClassNames } from 'fullcalendar';
 
 function MyCalendar() {
     const [date, setDate] = useState(new Date());
@@ -58,6 +59,7 @@ function MyCalendar() {
                 aspectRatio={1}
                 expandRows={true}
                 eventColor={'white'}
+                // eventTextColor={'red'}
                 eventSources={[
                     { /* 기념일 : 글자 검은색 */
                         events :[
@@ -85,71 +87,29 @@ function MyCalendar() {
                                 title: "세계 물의 날",
                                 date: "2022-03-22",
                                 id: 7
-                            }
+                            },
                         ],
+                        textColor:'black'
+                        // classNames:'anniversary'
                     },
                     {   /* 공휴일 : 글자 빨간색 */
                         events:[
                             {
                                 title: "삼일절",
                                 date: "2022-03-01",
-                                className: 'custom'
+                                // textColor:'red'
                             },
                             {
                                 title: "20대 대통령 선거",
                                 date: "2022-03-09",
-                                id: 4
+                                // textColor:'red'
                             }
                         ],
+                        // classNames:'holiday',
                         textColor:'red',
-                        color:'pink'
+                        // Color:'red'
                     }
-                ]
-                }
-                    
-                
-
-
-                // events={[
-                //     {
-                //         "title": "삼일절",
-                //         textColor: "red",
-                //         "date": "2022-03-01",
-                //         "id": 1
-                //     },
-                //     {
-                //         "title": "음력 2.1",
-                //         "date": "2022-03-03",
-                //         "id": 2
-                //     },
-                //     {
-                //         "title": "경칩",
-                //         "date": "2022-03-05",
-                //         "id": 3
-                //     },
-                //     {
-                //         "title": "20대 대통령 선거",
-                //         "date": "2022-03-09",
-                //         "id": 4,
-                //         eventTextColor: "#ff0000"
-                //     },
-                //     {
-                //         "title": "음력 2.15",
-                //         "date": "2022-03-17",
-                //         "id": 5
-                //     },
-                //     {
-                //         "title": "춘분",
-                //         "date": "2022-03-21",
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       //         "id": 6
-                //     },
-                //     {
-                //         "title": "세계 물의 날",
-                //         "date": "2022-03-22",    
-                //         "id": 7
-                //     },
-                // ]
-                //}
+                ]}           
             />
         </div>
     );

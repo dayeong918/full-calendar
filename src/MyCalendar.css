@@ -104,7 +104,7 @@ h1{
 }
 /*이벤트 컨테이너 배경색,글자색 */
 .fc-event-title-container{
-    color:black;
+    /* color:black; */
     display:flex;
     justify-content: center;
 }
@@ -179,3 +179,9 @@ h1{
     background: #fff;
     background: var(--fc-page-bg-color, #fff);
 }
+/* .fc-event-title{
+    color:red;
+} */
+/* .fc-event{
+    color:red;
+} */
